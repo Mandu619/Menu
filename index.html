@@ -1,57 +1,94 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Bienvenido al Menú</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta | Restaurante</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #dfe9f3, #ffffff);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    header {
       text-align: center;
+      padding: 1em;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     h1 {
-      color: #333;
-      font-size: 2.5em;
-      margin-bottom: 20px;
+      font-size: 2em;
+      margin: 0.5em 0;
     }
 
-    .boton {
-      padding: 20px 40px;
-      background-color: #4CAF50;
-      color: white;
-      border-radius: 12px;
-      font-size: 1.5em;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .boton:hover {
-      background-color: #388E3C;
-    }
-
-    .container {
-      max-width: 600px;
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
       padding: 20px;
-      border-radius: 20px;
-      background-color: #ffffffcc;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card {
+      background-color: #222;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .card p {
+      margin: 0;
+      padding: 10px;
+      font-size: 1em;
+    }
+
+    @media screen and (max-width: 600px) {
+      .menu {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Bienvenido</h1>
-    <p>Haz clic en el botón para ver nuestro menú.</p>
-    <a href="Menu.pdf" class="boton" target="_blank">Ver Menú</a>
-  </div>
+  <header>
+    <img src="carta.jpg" alt="Restaurant">
+    <h1>CARTA</h1>
+  </header>
+
+  <section class="menu">
+    <a href="Menu.pdf" class="card" target="_blank">
+      <img src="carta.jpg" alt="Entradas">
+      <p>ENTRADAS Y PARA COMPARTIR</p>
+    </a>
+    <div class="card">
+      <p>PASTAS CASERAS</p>
+    </div>
+    <div class="card">
+      <p>CARNES Y PESCADOS</p>
+    </div>
+    <div class="card">
+      <p>ACOMPAÑAMIENTOS Y ENSALADAS</p>
+    </div>
+  </section>
 </body>
 </html>

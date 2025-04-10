@@ -2,14 +2,56 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Menú PDF</title>
+  <title>Bienvenido al Menú</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #dfe9f3, #ffffff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .boton {
+      padding: 20px 40px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 12px;
+      font-size: 1.5em;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .boton:hover {
+      background-color: #388E3C;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 20px;
+      border-radius: 20px;
+      background-color: #ffffffcc;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
-  <h1>Visualizador de Menú</h1>
-  <p>Abajo puedes ver el archivo PDF llamado <strong>Menu.pdf</strong>:</p>
-  
-  <embed src="Menu.pdf" type="application/pdf" width="100%" height="600px" />
-
-  <p>Si no se carga correctamente, también puedes <a href="Menu.pdf" target="_blank">abrirlo en otra pestaña</a>.</p>
+  <div class="container">
+    <h1>Bienvenido</h1>
+    <p>Haz clic en el botón para ver nuestro menú.</p>
+    <a href="Menu.pdf" class="boton" target="_blank">Ver Menú</a>
+  </div>
 </body>
 </html>
